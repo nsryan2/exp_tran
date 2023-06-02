@@ -1,10 +1,11 @@
 # exp_tran
+2023 Summer proejct.
 
 ## Cyclus References
 *Starting a New Scenario*: http://fuelcycle.org/user/tutorial/sim_parm.html
 * Big simulation block (everything goes inside this)
 * Control block (only once)
-* 
+* Archetypes
 
 *Control Parameters*: http://fuelcycle.org/user/input_specs/control.html
 * duration (required once) - time duration (months)
@@ -24,10 +25,22 @@
 *     coin-or: use the COIN-OR CLP/CBC solver suite
 *   allow_exclusive_orders (optional) - False doesn't work with cycamore, but guarentees DRE solution
 
-*Cycamore Architypes*
+*Cycamore Archetypes*
 * [Source](http://fuelcycle.org/user/cycamoreagents.html#cycamore-source): a generic source of material.
 * [Enrichment](http://fuelcycle.org/user/cycamoreagents.html#cycamore-enrichment): for enrichment of U-235 in U-238, constrained total enrichment capacity.
 * [Reactor](http://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor): Fuel is modeled as batches and assemblies that are reloaded at regular intervals.
 * [Separations](http://fuelcycle.org/user/cycamoreagents.html#cycamore-separations): Takes in materials and outputs isotope streams.
 * [FuelFab](http://fuelcycle.org/user/cycamoreagents.html#cycamore-fuelfab): Mixes fissile and fertile stuff to approximate a recipe with the d-factor approach.
 * [Sink](http://fuelcycle.org/user/cycamoreagents.html#cycamore-sink): Takes in whatever, no output.
+Format:
+```
+<archetypes>
+    <spec><lib>lib1</lib><name>arch_1</name></spec>
+    <spec><lib>lib2</lib><name>arch_2</name></spec>
+</archetypes>
+```
+
+
+## Cyclus Tricks
+* Run `cyclus -a` in your terminal to see which archetypes you have downloaded.
+* 
