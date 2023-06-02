@@ -6,6 +6,7 @@
 * Big simulation block (everything goes inside this)
 * Control block (only once)
 * Archetypes
+* Commodities & Recipes
 
 *Control Parameters*: http://fuelcycle.org/user/input_specs/control.html
 * duration (required once) - time duration (months)
@@ -39,8 +40,28 @@ Format:
     <spec><lib>lib2</lib><name>arch_2</name></spec>
 </archetypes>
 ```
-
-
+*Defining Commodities with Recipes*
+There isn't one commodity block like the archetypes, instead you do one <commodity> and one <[recipe](http://fuelcycle.org/user/input_specs/recipe.html)> for each material. The basic blocks look like:
+    ```
+    <commodity>
+      <name>u-ore</name>
+      <solution_priority>1.0</solution_priority>
+    </commodity>
+    <recipe>
+      <name>u-ore</name>
+      <basis>mass</basis>
+      <nuclide>
+        <id>92235</id>
+        <comp>0.00711</comp>
+      </nuclide>
+      <nuclide>
+        <id>92238</id>
+        <comp>0.99289</comp>
+      </nuclide>
+    </recipe>  
+    ```
+Recipes are typically located at the end of the input file.
+    
 ## Cyclus Tricks
 * Run `cyclus -a` in your terminal to see which archetypes you have downloaded.
 * 
