@@ -2,13 +2,18 @@
 2023 Summer proejct.
 
 ## Cyclus References
-*Starting a New Scenario*: http://fuelcycle.org/user/tutorial/sim_parm.html
+Outline the components to an input file.
+
+### Starting a New Scenario
+http://fuelcycle.org/user/tutorial/sim_parm.html
 * Big simulation block (everything goes inside this)
 * Control block (only once)
 * Archetypes
 * Commodities & Recipes
+* Facilities (use the archetypes)
 
-*Control Parameters*: http://fuelcycle.org/user/input_specs/control.html
+### Control Parameters
+http://fuelcycle.org/user/input_specs/control.html 
 * duration (required once) - time duration (months)
 * startmonth (required once) - starting month, 1 = January
 * startyear (required once) - starting year
@@ -26,7 +31,7 @@
 *     coin-or: use the COIN-OR CLP/CBC solver suite
 *   allow_exclusive_orders (optional) - False doesn't work with cycamore, but guarentees DRE solution
 
-*Cycamore Archetypes*
+### Cycamore Archetypes
 * [Source](http://fuelcycle.org/user/cycamoreagents.html#cycamore-source): a generic source of material.
 * [Enrichment](http://fuelcycle.org/user/cycamoreagents.html#cycamore-enrichment): for enrichment of U-235 in U-238, constrained total enrichment capacity.
 * [Reactor](http://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor): Fuel is modeled as batches and assemblies that are reloaded at regular intervals.
@@ -40,28 +45,47 @@ Format:
     <spec><lib>lib2</lib><name>arch_2</name></spec>
 </archetypes>
 ```
-*Defining Commodities with Recipes*
-There isn't one commodity block like the archetypes, instead you do one <commodity> and one <[recipe](http://fuelcycle.org/user/input_specs/recipe.html)> for each material. The basic blocks look like:
-    ```
-    <commodity>
-      <name>u-ore</name>
-      <solution_priority>1.0</solution_priority>
-    </commodity>
-    <recipe>
-      <name>u-ore</name>
-      <basis>mass</basis>
-      <nuclide>
-        <id>92235</id>
-        <comp>0.00711</comp>
-      </nuclide>
-      <nuclide>
-        <id>92238</id>
-        <comp>0.99289</comp>
-      </nuclide>
-    </recipe>  
-    ```
+### Defining Commodities with Recipes
+There isn't one commodity block like the archetypes, instead you do one commodity and one [recipe](http://fuelcycle.org/user/input_specs/recipe.html) for each material. The basic blocks look like
+```
+<commodity>
+  <name>u-ore</name>
+  <solution_priority>1.0</solution_priority>
+</commodity>
+<recipe>
+  <name>u-ore</name>
+  <basis>mass</basis>
+  <nuclide>
+    <id>92235</id>
+    <comp>0.00711</comp>
+  </nuclide>
+  <nuclide>
+    <id>92238</id>
+    <comp>0.99289</comp>
+  </nuclide>
+</recipe>  
+```
 Recipes are typically located at the end of the input file.
-    
+
+### Facility parameters
+Required:
+```
+<facility>
+  <name>name</name>
+  <config>
+    <Archetype>
+      <outcommod>out_commodity</outcommod>
+    </Archetype>
+  </config>
+</facility>
+```
+* [Source Params](http://fuelcycle.org/user/tutorial/add_proto.html#example-source-prototype)
+* [Enrichment Params](http://fuelcycle.org/user/tutorial/add_proto.html#example-enrichment-prototype)
+* [Reactor Params](http://fuelcycle.org/user/tutorial/add_proto.html#activity-creating-the-reactor-prototype)
+* [Sink Params](http://fuelcycle.org/user/tutorial/add_proto.html#example-sink-prototype)
+
+
+
 ## Cyclus Tricks
 * Run `cyclus -a` in your terminal to see which archetypes you have downloaded.
 * 
