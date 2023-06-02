@@ -23,3 +23,11 @@
 *     greedy: fast, based on the average preference of exchange groups
 *     coin-or: use the COIN-OR CLP/CBC solver suite
 *   allow_exclusive_orders (optional) - False doesn't work with cycamore, but guarentees DRE solution
+
+*Cycamore Architypes*
+* [Source](http://fuelcycle.org/user/cycamoreagents.html#cycamore-source): a generic source of material.
+* [Enrichment](http://fuelcycle.org/user/cycamoreagents.html#cycamore-enrichment): for enrichment of U-235 in U-238, constrained total enrichment capacity.
+* [Reactor](http://fuelcycle.org/user/cycamoreagents.html#cycamore-reactor): Fuel is modeled as batches and assemblies that are reloaded at regular intervals.
+* [Separations](http://fuelcycle.org/user/cycamoreagents.html#cycamore-separations): Takes in materials and outputs isotope streams.
+* [FuelFab](http://fuelcycle.org/user/cycamoreagents.html#cycamore-fuelfab): Mixes fissile and fertile stuff to approximate a recipe with the d-factor approach.
+* [Sink](http://fuelcycle.org/user/cycamoreagents.html#cycamore-sink): Takes in whatever, no output.
