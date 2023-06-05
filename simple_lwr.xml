@@ -7,10 +7,10 @@
   </control>
 
   <archetypes>
-    <spec><lib>cycamore</lib><name>Reactor</name></spec>
-    <spec><lib>cycamore</lib><name>GrowthRegion</name></spec>
     <spec><lib>agents</lib><name>NullInst</name></spec>
     <spec><lib>agents</lib><name>NullRegion</name></spec>
+    <spec><lib>cycamore</lib><name>Reactor</name></spec>
+    <spec><lib>cycamore</lib><name>GrowthRegion</name></spec>
     <spec><lib>cycamore</lib><name>Source</name></spec>
     <spec><lib>cycamore</lib><name>Sink</name></spec>
   </archetypes>
