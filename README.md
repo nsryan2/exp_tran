@@ -11,6 +11,7 @@ http://fuelcycle.org/user/tutorial/sim_parm.html
 * Archetypes
 * Commodities & Recipes
 * Facilities (use the archetypes)
+* Regions and Institutions
 
 ### Control Parameters
 http://fuelcycle.org/user/input_specs/control.html 
@@ -84,8 +85,40 @@ Required:
 * [Reactor Params](http://fuelcycle.org/user/tutorial/add_proto.html#activity-creating-the-reactor-prototype)
 * [Sink Params](http://fuelcycle.org/user/tutorial/add_proto.html#example-sink-prototype)
 
+### Regions and Institutions
+You need at least one region and one institution, the archetypes block has to at least include:
+```
+<spec>
+    <lib>agents</lib>
+    <name>NullRegion</name>
+</spec>
+<spec>
+    <lib>agents</lib>
+    <name>NullInst</name>
+</spec>
+```
+Region blocks wrap around institution blocks, and generally look like:
+```
+<region>
+  <name>[VALUE]</name>
+  <config>
+    <NullRegion/>
+  </config>
+  <institution>
+    <initialfacilitylist>
+      <entry>
+        <prototype>[VALUE]</prototype>
+        <number>[VALUE]</number>
+      </entry>
+      </initialfacilitylist>
+    <name>[VALUE]</name>
+    <config>
+      <NullInst/>
+    </config>
+  </institution>
+</region>
+```
 
 
 ## Cyclus Tricks
 * Run `cyclus -a` in your terminal to see which archetypes you have downloaded.
-* 
