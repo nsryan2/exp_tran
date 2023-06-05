@@ -78,7 +78,7 @@
     <config>
       <Enrichment>
         <feed_commod>u-ore</feed_commod>
-        <feed_repice>u-ore</feed_repice>
+        <feed_recipe>u-ore</feed_recipe>
         <product_commod>fresh-uox</product_commod>
         <tails_commod>tails</tails_commod>
         <max_feed_inventory>1000000</max_feed_inventory>
@@ -117,34 +117,7 @@
   </facility>
 
   <region>
-    <name>region1</name>
-    <config>
-      <NullRegion/>
-    </config>
-    <institution>
-      <initialfacilitylist>
-        <entry>
-          <prototype>UraniumMine</prototype>
-          <number>1</number>
-        </entry>
-        <entry>
-          <prototype>Repository</prototype>
-          <number>1</number>
-        </entry>
-        <entry>
-          <prototype>EnrichmentPlant</prototype>
-          <name>1</name>
-        </entry>
-      </initialfacilitylist>
-      <name>US</name>
-      <config>
-        <NullInst/>
-      </config>
-    </institution>
-  </region>
-
-  <region>
-    <name>region2</name>
+    <name>USA</name>
     <config>
       <NullRegion/>
     </config>
@@ -155,7 +128,28 @@
           <number>1</number>
         </entry>
       </initialfacilitylist>
-      <name>Constellation</name>
+      <name>Exelon</name>
+      <config>
+        <NullInst/>
+      </config>
+    </institution>
+
+    <institution>
+      <initialfacilitylist>
+        <entry>
+          <prototype>UraniumMine</prototype>
+          <number>1</number>
+        </entry>
+        <entry>
+          <prototype>EnrichmentPlant</prototype>
+          <number>1</number>
+        </entry>
+        <entry>
+          <prototype>Repository</prototype>
+          <number>1</number>
+        </entry>
+      </initialfacilitylist>
+      <name>United States Nuclear</name>
       <config>
         <NullInst/>
       </config>
