@@ -78,7 +78,7 @@
     <config>
       <Enrichment>
         <feed_commod>u-ore</feed_commod>
-        <feed_repice>u-ore</feed_repice>
+        <feed_recipe>u-ore</feed_recipe>
         <product_commod>fresh-uox</product_commod>
         <tails_commod>tails</tails_commod>
         <max_feed_inventory>1000000</max_feed_inventory>
