@@ -1,6 +1,6 @@
 <simulation>
   <control>
-    <duration>120</duration>
+    <duration>820</duration>
     <startmonth>1</startmonth>
     <startyear>2000</startyear>
     <decay>never</decay>
