@@ -2,7 +2,7 @@
   <control>
     <duration>820</duration>
     <startmonth>1</startmonth>
-    <startyear>2018</startyear>
+    <startyear>2010</startyear>
     <decay>manual</decay>
   </control>
 
@@ -85,7 +85,7 @@
         <feed_recipe>u-ore</feed_recipe>
         <product_commod>fresh-uox</product_commod>
         <tails_commod>tails</tails_commod>
-        <max_feed_inventory>1000000</max_feed_inventory>
+        <max_feed_inventory>1000</max_feed_inventory>
       </Enrichment>
     </config>
   </facility>
@@ -170,8 +170,8 @@
           </prototypes>
           <build_times>
             <val>1</val>
-            <val>1</val>
-            <val>4</val>
+            <val>18</val>
+            <val>40</val>
           </build_times>
           <n_build>
             <val>3</val>
