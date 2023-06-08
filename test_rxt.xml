@@ -130,7 +130,19 @@
       </initialfacilitylist>
       <name>Exelon</name>
       <config>
-        <NullInst/>
+        <DeployInst>
+          <prototypes>
+            <val>1178MWe BRAIDWOOD-1</val>
+          </prototypes>
+
+          <build_times>
+            <val>5</val>
+          </build_times>
+
+          <n_build>
+            <val>2</val>
+          </n_build>
+        </DeployInst>
       </config>
     </institution>
 
@@ -138,7 +150,7 @@
       <initialfacilitylist>
         <entry>
           <prototype>UraniumMine</prototype>
-          <number>0</number>
+          <number>1</number>
         </entry>
         <entry>
           <prototype>EnrichmentPlant</prototype>
@@ -146,12 +158,27 @@
         </entry>
         <entry>
           <prototype>Repository</prototype>
-          <number>0</number>
+          <number>1</number>
         </entry>
       </initialfacilitylist>
       <name>United States Nuclear</name>
       <config>
-        <NullInst/>
+        <DeployInst>
+          <prototypes>
+            <val>UraniumMine</val>
+            <val>EnrichmentPlant</val>
+          </prototypes>
+
+          <build_times>
+            <val>1</val>
+            <val>2</val>
+          </build_times>
+
+          <n_build>
+            <val>1</val>
+            <val>3</val>
+          </n_build>
+        </DeployInst>
       </config>
     </institution>
   </region>
