@@ -1,6 +1,6 @@
 <simulation>
   <control>
-    <duration>8200</duration>
+    <duration>820</duration>
     <startmonth>1</startmonth>
     <startyear>2018</startyear>
     <decay>manual</decay>
@@ -22,6 +22,10 @@
     <spec>
         <lib>cycamore</lib>
         <name>Sink</name>
+    </spec>
+    <spec>
+        <lib>cycamore</lib>
+        <name>DeployInst</name>
     </spec>
     <spec>
         <lib>agents</lib>
