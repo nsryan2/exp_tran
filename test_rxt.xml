@@ -1,9 +1,9 @@
 <simulation>
   <control>
-    <duration>720</duration>
+    <duration>8200</duration>
     <startmonth>1</startmonth>
     <startyear>2018</startyear>
-    <decay>never</decay>
+    <decay>manual</decay>
   </control>
 
   <archetypes>
@@ -125,7 +125,7 @@
       <initialfacilitylist>
         <entry>
           <prototype>1178MWe BRAIDWOOD-1</prototype>
-          <number>1</number>
+          <number>0</number>
         </entry>
       </initialfacilitylist>
       <name>Exelon</name>
@@ -138,15 +138,15 @@
       <initialfacilitylist>
         <entry>
           <prototype>UraniumMine</prototype>
-          <number>1</number>
+          <number>0</number>
         </entry>
         <entry>
           <prototype>EnrichmentPlant</prototype>
-          <number>1</number>
+          <number>0</number>
         </entry>
         <entry>
           <prototype>Repository</prototype>
-          <number>1</number>
+          <number>0</number>
         </entry>
       </initialfacilitylist>
       <name>United States Nuclear</name>
