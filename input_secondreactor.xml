@@ -2,8 +2,8 @@
   <control>
     <duration>720</duration>
     <startmonth>1</startmonth>
-    <startyear>2018</startyear>
-    <decay>never</decay>
+    <startyear>2000</startyear>
+    <decay>lazy</decay>
   </control>
 
   <archetypes>
@@ -93,7 +93,7 @@
   </facility>
 
   <facility>
-    <name>1178MWe BRAIDWOOD-1</name>
+    <name>1000MWe LWR</name>
     <config>
       <Reactor>
         <fuel_incommods> <val>fresh_uox</val> </fuel_incommods>
@@ -105,13 +105,13 @@
         <assem_size>33000</assem_size>
         <n_assem_core>3</n_assem_core>
         <n_assem_batch>1</n_assem_batch>
-        <power_cap>1178</power_cap>
+        <power_cap>1000</power_cap>
       </Reactor>
       </config>
   </facility>
 
   <facility>
-    <name>1000MWe Lightwater-1</name>
+    <name>SMR</name>
     <lifetime>360</lifetime>
     <config>
       <Reactor>
@@ -119,9 +119,9 @@
           <fuel_inrecipes> <val>fresh_uox</val> </fuel_inrecipes>
           <fuel_outcommods> <val>spent_uox</val> </fuel_outcommods>
           <fuel_outrecipes> <val>spent_uox</val> </fuel_outrecipes>
-          <cycle_time>12</cycle_time>
+          <cycle_time>20</cycle_time>
           <refuel_time>1</refuel_time>
-          <assem_size>30160</assem_size>
+          <assem_size>180</assem_size>
           <n_assem_core>3</n_assem_core>
           <n_assem_batch>1</n_assem_batch>
           <power_cap>1000</power_cap>
@@ -176,11 +176,11 @@
       <name>Exelon Reactors</name>
       <initialfacilitylist>
 	<entry>
-	  <prototype>1178MWe BRAIDWOOD-1</prototype>
+	  <prototype>1000MWe LWR</prototype>
 	  <number>1</number>
 	</entry>
 	<entry>
-	  <prototype>1000MWe Lightwater-1</prototype>
+	  <prototype>SMR</prototype>
 	  <number>1</number>
 	</entry>
       </initialfacilitylist>
