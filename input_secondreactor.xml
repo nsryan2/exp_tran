@@ -187,6 +187,7 @@
     <config>
       <Sink>
         <in_commods>
+          <val>spent_haleu</val>
           <val>spent_uox</val>
           <val>tails</val>
         </in_commods>
