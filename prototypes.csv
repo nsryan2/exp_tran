@@ -1,0 +1,9 @@
+Prototype,AgentId,Spec
+EnrichmentPlant,12,:cycamore:Enrichment
+"1000MWe LWR",13,:cycamore:Reactor
+MMR,14,:cycamore:Reactor
+UraniumMine,15,:cycamore:Source
+NuclearRepository,16,:cycamore:Sink
+"United States Nuclear",17,:agents:NullInst
+"Exelon Reactors",18,:agents:NullInst
+USA,19,:agents:NullRegion
