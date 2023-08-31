@@ -14,7 +14,7 @@ http://fuelcycle.org/user/tutorial/sim_parm.html
 * Regions and Institutions
 
 ### Control Parameters
-http://fuelcycle.org/user/input_specs/control.html 
+http://fuelcycle.org/user/input_specs/control.html
 * duration (required once) - time duration (months)
 * startmonth (required once) - starting month, 1 = January
 * startyear (required once) - starting year
@@ -64,7 +64,7 @@ There isn't one commodity block like the archetypes, instead you do one commodit
     <id>92238</id>
     <comp>0.99289</comp>
   </nuclide>
-</recipe>  
+</recipe>
 ```
 Recipes are typically located at the end of the input file.
 
@@ -122,3 +122,5 @@ Region blocks wrap around institution blocks, and generally look like:
 
 ## Cyclus Tricks
 * Run `cyclus -a` in your terminal to see which archetypes you have downloaded.
+* Run `cyclus file_name.xml -o output_name.sqlite`
+* To uninstall run `python install.py --uninstall`

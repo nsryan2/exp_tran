@@ -1,4 +1,4 @@
-<simulation>
+<simulation xml:base="/home/nsryan/Desktop/arfc/exp_tran/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <control>
     <duration>780</duration> <!--In months, goal is 2030-->
     <startmonth>1</startmonth>
@@ -24,7 +24,7 @@
     <solution_priority>1.0</solution_priority>
   </commodity>
   <commodity>
-    <name>fresh_haleu</name>
+    <name>fresh_haleu_triso</name>
     <solution_priority>1.0</solution_priority>
   </commodity>
   <commodity>
@@ -36,7 +36,7 @@
     <solution_priority>1.0</solution_priority>
   </commodity>
   <commodity>
-    <name>spent_haleu</name>
+    <name>spent_haleu_triso</name>
     <solution_priority>1.0</solution_priority>
   </commodity>
 
@@ -50,75 +50,6 @@
     <nuclide>
       <id>92238</id>
       <comp>0.99289</comp>
-    </nuclide>
-  </recipe>
-
-  <recipe>
-    <name>fresh_uox</name>
-    <basis>mass</basis>
-    <nuclide>
-      <id>92235</id>
-      <comp>0.04</comp>
-    </nuclide>
-    <nuclide>
-      <id>92238</id>
-      <comp>0.96</comp>
-    </nuclide>
-  </recipe>
-
-  <recipe>
-    <name>spent_uox</name>
-    <basis>mass</basis>
-    <nuclide>
-      <id>92235</id>
-      <comp>0.0011</comp>
-    </nuclide>
-    <nuclide>
-      <id>92238</id>
-      <comp>0.94</comp>
-    </nuclide>
-    <nuclide>
-      <id>94239</id>
-      <comp>0.009</comp>
-    </nuclide>
-    <nuclide>
-      <id>55137</id>
-      <comp>0.04</comp>
-    </nuclide>
-  </recipe>
-
-    <recipe>
-    <name>fresh_haleu</name>
-    <basis>mass</basis>
-    <nuclide>
-      <id>92235</id>
-      <comp>0.13</comp>
-    </nuclide>
-    <nuclide>
-      <id>92238</id>
-      <comp>0.87</comp>
-    </nuclide>
-  </recipe>
-
-<!-- Currently the same as spent u_ox, going to update -->
-  <recipe>
-    <name>spent_haleu</name>
-    <basis>mass</basis>
-    <nuclide>
-      <id>92235</id>
-      <comp>0.0011</comp>
-    </nuclide>
-    <nuclide>
-      <id>92238</id>
-      <comp>0.94</comp>
-    </nuclide>
-    <nuclide>
-      <id>94239</id>
-      <comp>0.009</comp>
-    </nuclide>
-    <nuclide>
-      <id>55137</id>
-      <comp>0.04</comp>
     </nuclide>
   </recipe>
 
@@ -160,9 +91,9 @@
     <config>
       <Reactor>
           <fuel_incommods> <val>fresh_uox</val> </fuel_incommods>
-          <fuel_inrecipes> <val>fresh_haleu</val> </fuel_inrecipes>
-          <fuel_outcommods> <val>spent_haleu</val> </fuel_outcommods>
-          <fuel_outrecipes> <val>spent_haleu</val> </fuel_outrecipes>
+          <fuel_inrecipes> <val>fresh_haleu_triso</val> </fuel_inrecipes>
+          <fuel_outcommods> <val>spent_haleu_triso</val> </fuel_outcommods>
+          <fuel_outrecipes> <val>spent_haleu_triso</val> </fuel_outrecipes>
           <cycle_time>240</cycle_time> <!--in months-->
           <refuel_time>1</refuel_time>
           <assem_size>180</assem_size>
@@ -187,7 +118,7 @@
     <config>
       <Sink>
         <in_commods>
-          <val>spent_haleu</val>
+          <val>spent_haleu_triso</val>
           <val>spent_uox</val>
           <val>tails</val>
         </in_commods>
@@ -209,10 +140,10 @@
           <prototype>NuclearRepository</prototype>
           <number>1</number>
         </entry>
-	<entry>
-	  <prototype>EnrichmentPlant</prototype>
-	  <number>1</number>
-	</entry>
+        <entry>
+          <prototype>EnrichmentPlant</prototype>
+          <number>1</number>
+        </entry>
       </initialfacilitylist>
       <config> <NullInst/> </config>
     </institution>
@@ -233,4 +164,6 @@
     </institution>
   </region>
 
+  <xi:include href="fuel_definitions/leu_fuel.xml#xpointer(/recipes/child::*)"/>
+  <xi:include href="fuel_definitions/triso_fuel.xml#xpointer(/recipes/child::*)"/>
 </simulation>
